@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike list</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h2>All bikes</h2>
+    <ul>
+        {% for bike in bikes %}
+         <li>{{bike.name}} - {{bike.company}} - ${{bike.price}}</li>
+         {% endfor %}
+    </ul>
+        <a href="{% url 'home' %}">Back to home  </a>
+
+</body>
+</html>
